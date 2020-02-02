@@ -6,89 +6,60 @@
 /// and concatenated to one another
 
 #include <stdio.h>
-
-char *filename;
-
-// Structure representing file header of a bitmap file
-typedef struct
-{
-    char *char_representation;
-    char signature[2];                  // signature = {'B', 'M'} in most cases
-    unsigned int file_size:4;
-    unsigned int reserved_1:2;          // Should be initialized the 0 (unsigned integer value)
-    unsigned int reserved_2:2;          // Same as above
-    unsigned int pixel_data_offset:4;   // Distance between the first byte of the file
-}HeaderFile;                            // and the first byte of the pixels data set
+#include "BMP_Pic.h"
 
 
-/*
-
-bbp = bits per pixel
-1 bbp -> 2 colors
-4 bbp -> 16 colors
-8 bbp (or 1 byte per pixel) -> 256 colors
-
- */
-
-// Structure representing image header of a bitmap file
-typedef struct
-{
-    char *char_representation;
-    unsigned int header_size:4;
-    int width:4;                        // In pixels
-    int height:4;                       // In pixels
-    const unsigned int planes:2;        // Number of color planes (1 in decimal)
-    unsigned int bbp:2;                 // bits per pixel
-    unsigned int compression:4;         // Value of compression to use (0 -> no compression)
-    unsigned int size:4;                // Final size of the compressed image (0 -> no compression has been used)
-    int x_ppm:4;                        // Horizontal resolution of the target device (0 -> no preference)
-    int y_ppm:4;                        // Vertical resolution of the target device (0 -> no preference)
-    unsigned int total_colors:4;        // Number of colors in the color pallet
-    unsigned int important_colors:4;    // Number of important colors (generally ignored, thus set to 0)
-}HeaderImage;
-
-
-// Structure representing the color pallet of the bitmap image
-typedef struct
-{
-    int R:1;
-    int G:1;
-    int B:1;
-    int reserved:1; // Should be set to 0
-}ColorPallet;
-
-
-// Structure representing a pixel of a bitmap image (with the RGB format)
-typedef struct
-{
-    char *char_representation;
-    int x;
-    int y;
-    int RGB[3];
-}PixelBMP;
-
-
-// Structure representing the image "format"/"file" itself
-// (which includes objects created out of the previous structures above)
-typedef struct
-{
-    char *char_representation;
-    HeaderFile headerFile;
-    HeaderImage headerImage;
-    ColorPallet pallet;
-    PixelBMP *pixels;
-}BMPImage;
-
-HeaderFile read_header_file(char* filename)
+/*HeaderFile read_header_file(char* filename)
 {
     FILE* imageFile = fopen(filename, "rb");
     //FIXME...
     //TODO...
+}*/
+
+void cat_num_str(char* chain_char1, int number, unsigned int start_index, unsigned int size_number)
+{
+    char file_size_char[size_number];
+    sprintf(file_size_char, "%ui", number);
+    for (unsigned int i = 0; i < size_number; i++)
+        chain_char1[start_index + i] = file_size_char[i];
+}
+
+// Functions to get the character representation of each structure
+char* get_File_Header_char(HeaderFile headerFile)
+{
+    char representation[14];
+    unsigned int index = 0;
+    for (unsigned int i = 0; i < 2; i++)
+    {
+        representation[i] = headerFile.signature[i];
+        index++;
+    }
+
+
+    cat_num_str(representation, (int)headerFile.file_size, index, 4);
+
+
+    return "";
 }
 
 
+/*char* get_Image_Header_char(HeaderImage headerImage)
+{
+    return "";
+}
 
 
+char* get_Pallet_char(ColorPallet pallet)
+{
+    return "";
+}
+
+
+char* get_Pixels_char(PixelBMP* pixels)
+{
+    return "";
+}
+*/
 
 
 

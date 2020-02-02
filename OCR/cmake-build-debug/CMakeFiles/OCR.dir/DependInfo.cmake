@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/francoissoulier/Desktop/@OCR@/OCR/BMP_Pic.c" "/Users/francoissoulier/Desktop/@OCR@/OCR/cmake-build-debug/CMakeFiles/OCR.dir/BMP_Pic.c.o"
-  "/Users/francoissoulier/Desktop/@OCR@/OCR/main.c" "/Users/francoissoulier/Desktop/@OCR@/OCR/cmake-build-debug/CMakeFiles/OCR.dir/main.c.o"
+  "/Users/francoissoulier/Desktop/OCR_Project/OCR/BMP_Pic.c" "/Users/francoissoulier/Desktop/OCR_Project/OCR/cmake-build-debug/CMakeFiles/OCR.dir/BMP_Pic.c.o"
+  "/Users/francoissoulier/Desktop/OCR_Project/OCR/main.c" "/Users/francoissoulier/Desktop/OCR_Project/OCR/cmake-build-debug/CMakeFiles/OCR.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 
