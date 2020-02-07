@@ -1,13 +1,7 @@
-//
-// Created by François Soulier on 05/02/2020.
-//
-
-#include "SDL_Functions.h"
+#include <stdio.h>
+#include "SDL/SDL.h"
+#include "SDL/SDL_image.h"
 #include <err.h>
-#include "SDL2/SDL_image.h"
-#include "SDL2/SDL.h"
-
-//char *path_global;
 
 void init_sdl()
 {
@@ -40,7 +34,7 @@ SDL_Surface* display_image(SDL_Surface *img)
     {
         // error management
         errx(1, "Couldn't set %dx%d video mode: %s\n",
-             img->w, img->h, SDL_GetError());
+                img->w, img->h, SDL_GetError());
     }
 
     // Blit onto the screen surface
@@ -71,10 +65,7 @@ void wait_for_keypressed()
     } while(event.type != SDL_KEYUP);
 }
 
-void free_allocated_memory(SDL_Surface *surface)
-{
-    SDL_FreeSurface(surface);
-}
+// void SDL_FreeSurface(SDL_Surface *surface);
 
 int main()
 {
@@ -83,12 +74,12 @@ int main()
 
     init_sdl();
 
-    image_surface = load_image("~/Pictures/Photos/IMG_3421.JPG");
+    image_surface = load_image("/Users/francoissoulier/Desktop/Hello.png");
     screen_surface = display_image(image_surface);
+
     wait_for_keypressed();
 
-    free_allocated_memory(image_surface);
-    free_allocated_memory(screen_surface);
-
+    SDL_FreeSurface(image_surface);
+    SDL_FreeSurface(screen_surface);
     return 0;
 }

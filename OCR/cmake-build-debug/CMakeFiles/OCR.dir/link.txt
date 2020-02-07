@@ -1,1 +1,0 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/OCR.dir/main.c.o CMakeFiles/OCR.dir/BMP_Pic.c.o CMakeFiles/OCR.dir/SDL_Functions.c.o  -o OCR 
