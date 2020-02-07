@@ -84,6 +84,12 @@
 		<Unit filename="/Users/francoissoulier/Desktop/OCR_Project/OCR/BMP_Pic.h">
 			<Option target="OCR"/>
 		</Unit>
+		<Unit filename="/Users/francoissoulier/Desktop/OCR_Project/OCR/SDL_Functions.c">
+			<Option target="OCR"/>
+		</Unit>
+		<Unit filename="/Users/francoissoulier/Desktop/OCR_Project/OCR/SDL_Functions.h">
+			<Option target="OCR"/>
+		</Unit>
 		<Unit filename="/Users/francoissoulier/Desktop/OCR_Project/OCR/main.c">
 			<Option target="OCR"/>
 		</Unit>

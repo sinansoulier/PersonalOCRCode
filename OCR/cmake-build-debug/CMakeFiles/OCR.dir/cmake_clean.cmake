@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/OCR.dir/BMP_Pic.c.o"
+  "CMakeFiles/OCR.dir/SDL_Functions.c.o"
   "CMakeFiles/OCR.dir/main.c.o"
   "OCR"
   "OCR.pdb"

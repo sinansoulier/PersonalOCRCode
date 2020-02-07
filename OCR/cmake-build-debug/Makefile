@@ -150,6 +150,33 @@ BMP_Pic.c.s:
 	$(MAKE) -f CMakeFiles/OCR.dir/build.make CMakeFiles/OCR.dir/BMP_Pic.c.s
 .PHONY : BMP_Pic.c.s
 
+SDL_Functions.o: SDL_Functions.c.o
+
+.PHONY : SDL_Functions.o
+
+# target to build an object file
+SDL_Functions.c.o:
+	$(MAKE) -f CMakeFiles/OCR.dir/build.make CMakeFiles/OCR.dir/SDL_Functions.c.o
+.PHONY : SDL_Functions.c.o
+
+SDL_Functions.i: SDL_Functions.c.i
+
+.PHONY : SDL_Functions.i
+
+# target to preprocess a source file
+SDL_Functions.c.i:
+	$(MAKE) -f CMakeFiles/OCR.dir/build.make CMakeFiles/OCR.dir/SDL_Functions.c.i
+.PHONY : SDL_Functions.c.i
+
+SDL_Functions.s: SDL_Functions.c.s
+
+.PHONY : SDL_Functions.s
+
+# target to generate assembly for a file
+SDL_Functions.c.s:
+	$(MAKE) -f CMakeFiles/OCR.dir/build.make CMakeFiles/OCR.dir/SDL_Functions.c.s
+.PHONY : SDL_Functions.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -189,6 +216,9 @@ help:
 	@echo "... BMP_Pic.o"
 	@echo "... BMP_Pic.i"
 	@echo "... BMP_Pic.s"
+	@echo "... SDL_Functions.o"
+	@echo "... SDL_Functions.i"
+	@echo "... SDL_Functions.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

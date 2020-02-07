@@ -12,21 +12,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ddc9c49-8893-4fb2-8501-b4fbf028818c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/SDL_Functions.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Functions.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BMP_Pic.c" beforeDir="false" afterPath="$PROJECT_DIR$/BMP_Pic.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BMP_Pic.h" beforeDir="false" afterPath="$PROJECT_DIR$/BMP_Pic.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OCR.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OCR.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OCR.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OCR.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OCR.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OCR.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OCR.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OCR.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OCR.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OCR.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OCR.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OCR.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/OCR.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OCR.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +92,19 @@
       <workItem from="1580574782181" duration="58000" />
       <workItem from="1580574867427" duration="145000" />
       <workItem from="1580575052250" duration="572000" />
-      <workItem from="1580661609390" duration="5242000" />
+      <workItem from="1580661609390" duration="5433000" />
+      <workItem from="1580748741094" duration="37000" />
+      <workItem from="1580764059811" duration="31000" />
+      <workItem from="1580896671731" duration="942000" />
+      <workItem from="1580898766916" duration="242000" />
+      <workItem from="1580899281276" duration="936000" />
+      <workItem from="1580900920588" duration="3078000" />
+      <workItem from="1580922171717" duration="161000" />
+      <workItem from="1580923592145" duration="72000" />
+      <workItem from="1580923844436" duration="113000" />
+      <workItem from="1580924074952" duration="188000" />
+      <workItem from="1580924961356" duration="221000" />
+      <workItem from="1581077337293" duration="41000" />
     </task>
     <servers />
   </component>
@@ -107,9 +120,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="333" y="148" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1580575321038" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1580664953547">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1580900078923">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1580664953547" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1580900078923" />
   </component>
 </project>
