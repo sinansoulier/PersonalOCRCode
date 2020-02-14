@@ -3,9 +3,14 @@
 #include "thresholding.h"
 #include <math.h>
 
-unsigned char max_pixel_intensity()
+unsigned char max_pixel_intensity(Uint32 pixel[][], int width, int height)
 {
-    //TODO
+    unsigned char maximum_intensity = 0;
+    for (unsigned int i = 0; i < width; i++)
+    {
+        for (unsigned int j = 0; j < height; j++)
+
+    }
 }
 
 unsigned int number_pixel_occurences()
@@ -48,7 +53,7 @@ float total_mean()
     //TODO
 }
 
-unsigned char otsu_criteria() //sigma_b^2
+unsigned char otsu_criteria(unsigned char t) //sigma_b^2
 {
     //TODO
 }
