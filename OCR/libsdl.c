@@ -74,7 +74,7 @@ int main()
 
     init_sdl();
 
-    image_surface = load_image("/home/sinan/Pictures/testimage.jpg");
+    image_surface = load_image("Try.jpg");
     screen_surface = display_image(image_surface);
 
     wait_for_keypressed();
