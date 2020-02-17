@@ -73,15 +73,38 @@ int main()
     SDL_Surface* image_surface;
     SDL_Surface* screen_surface;
 
-    // TODO: Initialize the SDL
+    init_sdl();
 
-    image_surface = load_image("my_image.jpg");
+    image_surface = load_image("/home/sinan/Pictures/testimage.jpg");
     screen_surface = display_image(image_surface);
 
-    // TODO: Wait for a key to be pressed.
+    wait_for_keypressed();
 
-    // TODO: Free the image surface.
-    // TODO: Free the screen surface.
+    unsigned int width = image_surface->w;
+    unsigned int height = image_surface->h;
+    
+    for (unsigned int i = 0; i < width; i++)
+    {
+        for (unsigned int j = 0; j < height; j++)
+        {
+            Uint32 pixel = get_pixel(image_surface, i, j);
+
+            Uint8 r, g, b;
+            SDL_GetRGB(pixel, image_surface->format, &r, &g, &b);
+
+            Uint8 average = (Uint8)(0.3*r + 0.59*g +0.11*b);
+
+            pixel = SDL_MapRGB(image_surface->format, average, average, average);
+            
+            put_pixel(image_surface, i, j, pixel);
+        }
+    }
+    
+    update_surface(screen_surface, image_surface);
+    wait_for_keypressed();
+    
+    SDL_FreeSurface(image_surface);
+    SDL_FreeSurface(screen_surface);
 
     return 0;
 }

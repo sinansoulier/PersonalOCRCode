@@ -26,26 +26,21 @@ void set_initital_parameters(SDL_Surface *image_surface, Uint8 *max_pixel_intens
     }
 }
 
-float probability_finding_pixel(SDL_Surface *image_surface, Uint32 pixel, unsigned int *occurences, unsigned int width, unsigned int height)
+float probability_finding_pixel(SDL_Surface *image_surface, Uint8 gray_value, unsigned int *occurences, unsigned int width, unsigned int height)
 {
-    Uint8 gray_value = get_gray_value(image_surface, pixel);
     return ((float)(occurences[gray_value])*(float)(gray_value))/((float)width*height);
 }
 
-float probability_first_class(unsigned int t, SDL_Surface *image_surface, unsigned int *number_pixel_occurences, unsigned int width, unsigned int height)
+float probability_first_second_class(unsigned int t, float *probability_second_class, SDL_Surface *image_surface, unsigned int *number_pixel_occurences, unsigned int width, unsigned int height)
 {
     float prob1 = 0.0f;
     for (unsigned int i = 0; i <= t; i++)
-    {
-        Uint8 gray_value;
-    }
+        prob1 += probability_finding_pixel(image_surface, (Uint8)i, number_pixel_occurences, width, height);
+        
+    *probability_second_class = (float)1 - prob1;
     return prob1;
 }
 
-float probability_second_class(unsigned char t) // omega_1 = 1 - omega_0
-{
-    //TODO
-}
 
 float first_class_mean(unsigned char t /* WITH PROBABILITY FIRST CLASS */)
 {
@@ -65,7 +60,8 @@ float total_mean(SDL_Surface *image_surface, unsigned int width, unsigned int he
         for (unsigned int j = 0; j < height; j++)
         {
             Uint32 pixel = get_pixel(image_surface, i, j);
-            t_mean += ((float)get_gray_value(image_surface, pixel))*(probability_finding_pixel(image_surface, pixel, occurences, width, height));
+            Uint8 gray_value = get_gray_value(image_surface, pixel);
+            t_mean += ((float)gray_value)*(probability_finding_pixel(image_surface, gray_value, occurences, width, height));
         }
     }
 }
