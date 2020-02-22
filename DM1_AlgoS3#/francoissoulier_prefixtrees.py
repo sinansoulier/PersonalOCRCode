@@ -42,19 +42,21 @@ def longestwordlength(T):
     return (longest+1)
 
 
+def __sum(T, count=1):
+    sum = 0
+    for C in T.children:
+        rec_sum = __sum(C, count+1)
+        if C.key[1]:
+            sum += count
+        sum += rec_sum
+    return sum
 
-
-def __sum(T, count_l=0):
-    if T:
-        
-
-# In order to minimize the number of iterations, the function countword is not used here
 def averagelength(T):
     """ average word length
 
     """
-    (sum, count) = (__sum(T), countwords(T))
-    return (sum/count)
+    sum = __sum(T)
+    return sum
     
 ###############################################################################
 ## search and list
@@ -93,6 +95,11 @@ def completion(T, prefix):
 
 ###############################################################################
 ## Build
+
+
+def __treetolist(T, s=""):
+    pass
+
 
 def treetofile(T, filename):
     """ save the tree in a file

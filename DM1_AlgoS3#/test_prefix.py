@@ -146,4 +146,7 @@ Tree(('f',False),
 )])
 
 
-print("Average length (Tree2):", francoissoulier_prefixtrees.averagelength(Tree2),"\n")
+print("Average word length (Tree2):", francoissoulier_prefixtrees.averagelength(Tree2),"\n")
+
+s = "carcardcardinalcasecastcastlecasualcitycinemacirclecomecouldfamefamousfanfancyfantasticfantasy"
+print(len(s))
