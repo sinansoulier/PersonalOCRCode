@@ -8,6 +8,42 @@ print("Longest word length (Tree1):", francoissoulier_prefixtrees.longestwordlen
 print("Average word length (Tree1):", francoissoulier_prefixtrees.averagelength(prefixtreesexample.Tree1),"\n")
 
 
+TREE1 = francoissoulier_prefixtrees.treefromfile("textFiles/wordList1.txt")
+TREE2 = francoissoulier_prefixtrees.treefromfile("textFiles/wordList2.txt")
+#TREE3 = francoissoulier_prefixtrees.treefromfile("textFiles/list_fr.txt")
+
+"""print("Number of words (TREE1):", francoissoulier_prefixtrees.countwords(TREE1),"\n")
+print("Longest word length (TREE1):", francoissoulier_prefixtrees.longestwordlength(TREE1),"\n")
+print("Average length (TREE1):", francoissoulier_prefixtrees.averagelength(TREE1),"\n")
+
+print("Number of words (TREE2):", francoissoulier_prefixtrees.countwords(TREE2),"\n")
+print("Longest word length (TREE2):", francoissoulier_prefixtrees.longestwordlength(TREE2),"\n")
+print("Average length (TREE2):", francoissoulier_prefixtrees.averagelength(TREE2),"\n")
+
+print("Number of words (TREE3):", francoissoulier_prefixtrees.countwords(TREE3),"\n")
+print("Longest word length (TREE3):", francoissoulier_prefixtrees.longestwordlength(TREE3),"\n")
+print("Average length (TREE3):", francoissoulier_prefixtrees.averagelength(TREE3),"\n")
+"""
+
+print("List of words (Tree1):", francoissoulier_prefixtrees.wordlist(prefixtreesexample.Tree1),"\n")
+print("List of words (TREE2):", francoissoulier_prefixtrees.wordlist(TREE2))
+
+francoissoulier_prefixtrees.treetofile(prefixtreesexample.Tree1, "my_putain_de_txt_file.txt")
+francoissoulier_prefixtrees.treetofile(TREE2, "my_putain_de_txt_file2.txt")
+
+L1 = ['car', 'card', 'cardinal', 'case', 'cast', 'castle', 'casual', 'cinema', 'circle', 'city', 'come', 'could', 'fame', 'famous', 'fan', 'fancy', 'fantastic', 'fantasy']
+L1.append("chaperon")
+for e in L1:
+    print(e, "in TREE2:", francoissoulier_prefixtrees.searchword(TREE2, e),"\n")
+
+print(francoissoulier_prefixtrees.completion(prefixtreesexample.Tree1, "fan"),"\n")
+
+print(francoissoulier_prefixtrees.completion(prefixtreesexample.Tree1, "ci"),"\n")
+
+print(francoissoulier_prefixtrees.completion(prefixtreesexample.Tree1, "what"),"\n")
+
+print([]==None,"\n")
+
 Tree2 = Tree(('', False), 
 
     [Tree(('c', False), 
@@ -145,8 +181,3 @@ Tree(('f',False),
     
 )])
 
-
-print("Average word length (Tree2):", francoissoulier_prefixtrees.averagelength(Tree2),"\n")
-
-s = "carcardcardinalcasecastcastlecasualcitycinemacirclecomecouldfamefamousfanfancyfantasticfantasy"
-print(len(s))
