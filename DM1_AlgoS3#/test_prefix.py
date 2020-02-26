@@ -42,8 +42,6 @@ print(francoissoulier_prefixtrees.completion(prefixtreesexample.Tree1, "ci"),"\n
 
 print(francoissoulier_prefixtrees.completion(prefixtreesexample.Tree1, "what"),"\n")
 
-print([]==None,"\n")
-
 Tree2 = Tree(('', False), 
 
     [Tree(('c', False), 

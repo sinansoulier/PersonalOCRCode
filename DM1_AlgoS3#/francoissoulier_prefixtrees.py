@@ -132,6 +132,7 @@ def __completion(T, prefix, len_prefix, lvl):
         for C in T.children:
             if C.key[0] == prefix[len_prefix-lvl]:
                 return __completion(C, prefix, len_prefix, lvl-1)
+        return []
 
 def completion(T, prefix):
     """ generate the list of words with a common prefix
