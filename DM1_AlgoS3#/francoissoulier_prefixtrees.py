@@ -186,6 +186,9 @@ def __addword(T, word, index, length):
             if i < T.nbchildren:
                 if T.children[i].key[0] != word[index]:
                     T.children.insert(i, tree.Tree((word[index], end_word)))
+                else:
+                    if end_word:
+                        T.children[i].key = (word[index], True)
             else:
                 T.children.append(tree.Tree((word[index], end_word)))
         else:
