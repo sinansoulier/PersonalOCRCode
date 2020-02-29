@@ -11,6 +11,10 @@ print("Number of words (TREE3):", francoissoulier_prefixtrees.countwords(TREE3),
 print("Number of words (TREE1):", francoissoulier_prefixtrees.countwords(TREE1),"\n")
 print("Number of words (TREE2):", francoissoulier_prefixtrees.countwords(TREE2),"\n")
 
+print("Found fa?", francoissoulier_prefixtrees.searchword(TREE2, "fa"),"\n")
+print("Founc ci?", francoissoulier_prefixtrees.searchword(TREE2, "ci"),"\n")
+print("Found castl?", francoissoulier_prefixtrees.searchword(TREE2, "castl"),"\n")
+
 L1 = ['car', 'card', 'cardinal', 'case', 'cast', 'castle', 'casual', 'cinema', 'circle', 'city', 'come', 'could', 'fame', 'famous', 'fan', 'fancy', 'fantastic', 'fantasy']
 L1.append("chaperon")
 

@@ -102,7 +102,7 @@ def __searchword(T, word, index=0):
             return False
     else:
         if index == len(word):
-            return T.key[1]
+            return True
         for C in T.children:
             if C.key[0] == word[index]:
                 return __searchword(C, word, index+1)
